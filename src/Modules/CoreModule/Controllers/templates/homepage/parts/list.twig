@@ -1,0 +1,18 @@
+<ul>
+    {% if logs %}
+        {% for log in logs.logs %}
+            <li>
+                <a href="{{ log.getRealPath()|replace({(publicDir): ''}) }}" target="_blank" rel="noopener">
+                    {{ log.getFileName() }}
+                </a>
+            </li>
+        {% endfor %}
+    {% endif %}
+
+    {% if logs.nested_logs %}
+        <li>
+            <span>{{ logs.nested_logs.dir_name }} ({{ logs.nested_logs.count }})</span>
+            {% include 'Modules/CoreModule/Controllers/templates/homepage/parts/list.twig' with {'logs': logs.nested_logs} %}
+        </li>
+    {% endif %}
+</ul>

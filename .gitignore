@@ -1,0 +1,18 @@
+yarn-error.log
+
+###> symfony/framework-bundle ###
+/.env*
+/.env.local.php
+/public/bundles/
+/var/
+/vendor/
+###< symfony/framework-bundle ###
+###> squizlabs/php_codesniffer ###
+/.phpcs-cache
+/phpcs.xml
+###< squizlabs/php_codesniffer ###
+
+###> friendsofphp/php-cs-fixer ###
+/.php_cs
+/.php_cs.cache
+###< friendsofphp/php-cs-fixer ###

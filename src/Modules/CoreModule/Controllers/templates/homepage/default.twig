@@ -1,0 +1,73 @@
+{% extends layoutPath %}
+
+{% block content %}
+<div id="logs-list" class="container-fluid logs-list text-center">
+	<i class="fas fa-spinner fa-4x fa-spin"></i>
+</div>
+
+{% verbatim %}
+<template id="logs-list-template">
+	<ul class="text-left list-group logs-list">
+		{{for log of logs}}
+			{{component logsItem, log: log}}
+		{{/for}}
+	</ul>
+</template>
+<template id="logs-list-item-template">
+	<li class="list-group-item logs-list-item">
+		<div class="d-flex justify-content-between align-items-center">
+			<div>
+				{{if log.isDir}}
+					<a b-on="click showNestedLogs({{$log.filePath}})" role="button" class="d-inline-block">
+						<i class="{{if toggled}}fa-chevron-circle-down {{else}}fa-chevron-circle-right{{/if}} text-secondary fa fa-lg"></i>
+					</a>
+				{{/if}}
+
+				<span>
+					{{if log.isDir}}
+						<strong>{{$log.fileName}}</strong>
+
+					{{else}}
+						<a href="{{$window.viewLogUrl}}?filePath={{$encodeURIComponent(log.filePath)}}" target="_blank" rel="noopener">
+							{{$log.fileName}}
+						</a>
+					{{/if}}
+				</span>
+			</div>
+
+			<div>
+				{{if log.isDir}}
+					<span class="badge badge-info badge-circle">
+						<i class="fa fa-file"></i>
+						{{$log.directoryLogsCount}}
+					</span>
+				{{/if}}
+
+				<span class="ml-1 badge badge-info badge-circle">
+					<i class="fa fa-tachometer-alt"></i>
+					{{$log.fileSize}} MB
+				</span>
+
+				<a b-on="click deleteLogFile({{$log.filePath}})" role="button" data-file-path="{{$log.filePath}}">
+					<i class="fa fa-times-circle fa-lg text-danger"></i>
+				</a>
+			</div>
+		</div>
+
+		{{if log.nestedLogs.length}}
+			<div class="mt-2 {{if ! toggled}}d-none{{/if}}">
+				{{component logsList, logs: log.nestedLogs}}
+			</div>
+		{{/if}}
+	</li>
+</template>
+{% endverbatim %}
+
+<script>
+	window.deleteLogUrl = '{{ path('delete-log') }}';
+	window.getLogsUrl = '{{ path('get-logs') }}';
+	window.viewLogUrl = '{{ path('view-log') }}';
+	window.logs = '{{ logs|raw }}';
+</script>
+
+{% endblock %}

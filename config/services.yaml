@@ -1,0 +1,15 @@
+parameters:
+    logs_dir: '%kernel.project_dir%/var/external_logs'
+
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    App\:
+        resource: '../src/*'
+        exclude: '../src/{DependencyInjection,Entity,Migrations,Tests,Kernel.php}'
+
+    App\Modules\:
+        resource: '../src/Modules'
+        tags: ['controller.service_arguments']
