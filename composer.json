@@ -42,7 +42,6 @@
         "cs:fix": "ecs check src --fix",
         "phpstan:check": "phpstan analyse src --level max",
         "auto-scripts": {
-            "cache:clear": "symfony-cmd",
             "assets:install %PUBLIC_DIR%": "symfony-cmd"
         },
         "post-install-cmd": [
