@@ -41,7 +41,9 @@
         "cs:check": "ecs check src",
         "cs:fix": "ecs check src --fix",
         "phpstan:check": "phpstan analyse src --level max",
-        "auto-scripts": {},
+        "auto-scripts": {
+            "assets:install %PUBLIC_DIR%": "symfony-cmd"
+        },
         "post-install-cmd": [
             "@auto-scripts"
         ],
