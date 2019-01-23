@@ -1,7 +1,7 @@
 yarn-error.log
 
 ###> symfony/framework-bundle ###
-/.env*
+/.env.*
 /.env.local.php
 /public/bundles/
 /var/
