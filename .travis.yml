@@ -1,0 +1,21 @@
+language: php
+
+php:
+    - 7.2
+    - 7.3
+
+notifications:
+    email: false
+
+before_install:
+    - composer self-update
+
+install:
+    - composer install --no-interaction --prefer-source
+
+script:
+    - composer cs:check
+    - composer phpstan:check
+
+services:
+    - redis-server
