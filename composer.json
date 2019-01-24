@@ -1,6 +1,6 @@
 {
     "name": "apicart/logs-viewer",
-    "description": "A simple tool for viewing logs. Because sometime that's all you need."
+    "description": "A simple tool for viewing logs. Because sometime that's all you need.",
     "type": "project",
     "license": "MIT",
     "require": {
