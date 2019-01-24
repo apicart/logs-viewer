@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c1c57b984bf32fdf7f88c5d0419a31ec",
+    "content-hash": "ad37ac5526d83eaab92577a9febfc2a6",
     "packages": [
         {
             "name": "machy8/smart-controller",
-            "version": "v1.0.1",
+            "version": "v1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Machy8/smart-controller.git",
-                "reference": "799b0e071ff63c8eb4fd6934ddc9241126fc5058"
+                "reference": "6767856b5e591cd0ffaa2c618037833f125d879e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Machy8/smart-controller/zipball/799b0e071ff63c8eb4fd6934ddc9241126fc5058",
-                "reference": "799b0e071ff63c8eb4fd6934ddc9241126fc5058",
+                "url": "https://api.github.com/repos/Machy8/smart-controller/zipball/6767856b5e591cd0ffaa2c618037833f125d879e",
+                "reference": "6767856b5e591cd0ffaa2c618037833f125d879e",
                 "shasum": ""
             },
             "require": {
@@ -55,7 +55,7 @@
                 "controllers",
                 "symfony"
             ],
-            "time": "2019-01-04T18:31:41+00:00"
+            "time": "2019-01-24T00:19:48+00:00"
         },
         {
             "name": "psr/cache",
