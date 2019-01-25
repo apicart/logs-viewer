@@ -15,6 +15,8 @@
 A simple tool for viewing logs. Because sometime that's all you need.
 
 ## Installation 
+If you use Docker, you can use the the [docker image](https://github.com/apicart/logs-viewer-docker).
+
 1. Create Logs Viewer project
 ```
 composer create-project apicart/logs-viewer logs-viewer
