@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace App\Modules\CoreModule\Controllers;
+namespace App\Controller;
 
 use Machy8\SmartController\SmartController;
 use Symfony\Component\Filesystem\Filesystem;
@@ -16,7 +16,7 @@ abstract class AbstractController extends SmartController
 	public function beforeRender(): void
 	{
 		$this->setTemplateParameters([
-			'layoutPath' => $this->getTemplatePath('layout', self::class),
+			'layoutPath' => 'abstract/layout.twig',
 			'logFilesCount' => $this->getLogsCount($this->getLogsDir()),
 			'logsSize' => $this->getLogsDirSize($this->getLogsDir())
 		]);

@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace App\Modules\CoreModule\Controllers;
+namespace App\Controller;
 
 use Nette\Utils\FileSystem;
 use Nette\Utils\Json;
@@ -21,7 +21,7 @@ final class HomepageController extends AbstractController
 	 */
 	public function renderDefault(): Response
 	{
-		return $this->renderTemplate([
+		return $this->renderTemplate('homepage/default.twig', [
 			'logs' => $this->getLogs($this->getLogsDir())
 		]);
 	}
