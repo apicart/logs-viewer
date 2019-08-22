@@ -4,16 +4,16 @@
     "type": "project",
     "license": "MIT",
     "require": {
-        "php": "^7.3",
+        "php": "^7.2",
         "ext-ctype": "*",
         "ext-iconv": "*",
         "machy8/smart-controller": "^1.1",
-        "symfony/console": "4.2.*",
-        "symfony/dotenv": "4.2.*",
+        "symfony/console": "4.3.*",
+        "symfony/dotenv": "4.3.*",
         "symfony/flex": "^1.1",
-        "symfony/framework-bundle": "4.2.*",
+        "symfony/framework-bundle": "4.3.*",
         "symfony/monolog-bundle": "^3.4",
-        "symfony/yaml": "4.2.*"
+        "symfony/yaml": "4.3.*"
     },
     "config": {
         "preferred-install": {
@@ -59,7 +59,7 @@
     "extra": {
         "symfony": {
             "allow-contrib": false,
-            "require": "4.2.*"
+            "require": "4.3.*"
         },
         "branch-alias": {
             "dev-master": "1.0-dev"
