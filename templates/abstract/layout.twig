@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+
+        {% include 'abstract/parts/favicons.twig' %}
+
+        {% include 'abstract/parts/head-assets.twig' %}
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="UTF-8">
+		<title>Logs viewer</title>
+
+	</head>
+	<body>
+
+		{% include 'abstract/parts/header.twig' %}
+
+		<main>
+			{% block content %}{% endblock %}
+		</main>
+
+        {% include 'abstract/parts/footer.twig' %}
+
+        {% include 'abstract/parts/footer-assets.twig' %}
+
+		{% block footerAssets %}{% endblock %}
+
+	</body>
+</html>
