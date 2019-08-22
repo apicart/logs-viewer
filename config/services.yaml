@@ -10,6 +10,6 @@ services:
         resource: '../src/*'
         exclude: '../src/{DependencyInjection,Entity,Migrations,Tests,Kernel.php}'
 
-    App\Modules\:
-        resource: '../src/Modules'
+    App\Controller\:
+        resource: '../src/Controller'
         tags: ['controller.service_arguments']
