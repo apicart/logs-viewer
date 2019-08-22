@@ -14,6 +14,9 @@
             "ref": "cb4152ebcadbe620ea2261da1a1c5a9b8cea7672"
         }
     },
+    "doctrine/inflector": {
+        "version": "v1.3.0"
+    },
     "doctrine/lexer": {
         "version": "v1.0.1"
     },
@@ -26,11 +29,20 @@
             "ref": "81dee417d2cc60cd1c9d6208dff2ec22a1103e93"
         }
     },
+    "illuminate/contracts": {
+        "version": "v5.8.33"
+    },
+    "illuminate/support": {
+        "version": "v5.8.33"
+    },
     "jean85/pretty-package-versions": {
         "version": "1.2"
     },
     "machy8/smart-controller": {
-        "version": "v1.0.1"
+        "version": "v1.1.0"
+    },
+    "nesbot/carbon": {
+        "version": "2.23.1"
     },
     "nette/bootstrap": {
         "version": "v2.4.6"
@@ -188,6 +200,15 @@
     "symfony/stopwatch": {
         "version": "v4.2.2"
     },
+    "symfony/translation": {
+        "version": "3.3",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "3.3",
+            "ref": "2ad9d2545bce8ca1a863e50e92141f0b9d87ffcd"
+        }
+    },
     "symfony/twig-bridge": {
         "version": "v4.2.2"
     },
@@ -229,12 +250,6 @@
     },
     "symplify/package-builder": {
         "version": "v5.3.4"
-    },
-    "symplify/token-runner": {
-        "version": "v5.3.4"
-    },
-    "thecodingmachine/safe": {
-        "version": "v0.1.9"
     },
     "twig/twig": {
         "version": "v2.6.0"
