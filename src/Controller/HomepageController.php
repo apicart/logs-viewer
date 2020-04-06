@@ -66,16 +66,23 @@ final class HomepageController extends AbstractController
 	{
 		$file = $request->get('filePath');
 		$response = 'error';
+		$headers = [];
 
 		if ($file !== null) {
 			$file = $this->getLogFilePath($file);
 
 			if (file_exists($file)) {
 				$response = FileSystem::read($file);
+				if (strpos($file, '.html') !== false) {
+					$headers['Content-Type'] = 'text/html';
+
+				} else {
+					$headers['Content-Type'] = 'text/plain';
+				}
 			}
 		}
 
-		return new Response($response);
+		return new Response($response, 200, $headers);
 	}
 
 
