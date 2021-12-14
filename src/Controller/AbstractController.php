@@ -33,7 +33,7 @@ abstract class AbstractController extends SmartController
 
 	protected function getFinder(): Finder
 	{
-		return new Finder();
+		return (new Finder())->followLinks();
 	}
 
 
